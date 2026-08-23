@@ -1,0 +1,21 @@
+# Generated visual QA captures
+/artifacts/
+
+# Deployment archives and local build output
+*.tar.gz
+*.tgz
+*.zip
+node_modules/
+dist/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# Operating system files
+.DS_Store
+Thumbs.db
