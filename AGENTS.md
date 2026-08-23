@@ -10,6 +10,17 @@ This repository is the user's personal website: an expressive "Internet Playgrou
 - Serious work belongs within the same visual world. Do not reintroduce a disconnected full-black page.
 - Describe projects from verified source material only. Never turn a prototype, private experiment, or internal work into a public launch, adoption claim, or business result.
 
+## Voice and copy
+
+- Write like a real person who makes things seriously but refuses to present themself as a success-story template.
+- Keep the tone lively, first-person and lightly self-deprecating. The joke may target the maker, the work's small frictions, or the surrounding internet/product culture; never target visitors or make a project sound unreliable.
+- Treat AI as a visible, site-wide theme. It is both a default collaborator in the user's making process and a first-class interaction/design material in relevant products.
+- Pair enthusiasm for AI-native making with real judgement about its trade-offs, limitations and over-promises. Do not turn this into generic AI boosterism or reflexive cynicism.
+- Serious-project cards may contain a restrained dry aside, including about the making process, but their factual contribution, scope and outcome must remain clear first.
+- Give every playful line a job: reveal a concrete habit, decision, tension or point of view. Do not add jokes simply to sound young.
+- Avoid generic portfolio/AI copy such as "digital universe", "explore infinite possibilities", "empower", "disrupt", "passionate about", and grand claims without evidence.
+- Keep legal, capability-boundary, privacy and deployment copy plain and precise. Never invent failures, usage, metrics, project behaviour or AI capabilities for tone.
+
 ## Local implementation and Git autonomy
 
 - Agents may improve front-end code and run local/browser verification without asking again.
