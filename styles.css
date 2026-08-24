@@ -113,6 +113,8 @@ a:focus-visible, button:focus-visible { outline: 4px solid var(--pink); outline-
 .work-row:hover { padding-inline: 32px 10px; background: var(--cream); color: var(--black); }
 .work-row:nth-child(3):hover { background: var(--blue); color: white; }
 .work-row:nth-child(4):hover { background: var(--yellow); color: var(--black); }
+.work-row:nth-child(5):hover { background: var(--pink); color: var(--black); }
+.work-row:nth-child(6):hover { background: var(--mint); color: var(--black); }
 .work-row:hover small, .work-row:hover > i { color: inherit; }
 
 .toy-shelf { display: grid; grid-template-columns: 330px 1fr; border-bottom: 3px solid var(--black); background: var(--pink); }
@@ -129,6 +131,20 @@ a:focus-visible, button:focus-visible { outline: 4px solid var(--pink); outline-
 .toy-card h3 { position: relative; z-index: 2; margin: 0 0 8px; font: 900 clamp(30px, 3vw, 48px)/1 "Arial Black", "Microsoft YaHei UI", sans-serif; letter-spacing: -.055em; }
 .toy-card p { position: relative; z-index: 2; max-width: 430px; margin: 0 0 20px; font-size: 12px; font-weight: 750; line-height: 1.65; }
 .toy-card > a, .local-only { position: relative; z-index: 2; justify-self: start; border: 2px solid var(--black); border-radius: 999px; padding: 7px 10px; background: var(--cream); font: 800 8px/1 "Cascadia Mono", monospace; }
+.toy-momentum { grid-column: 1 / -1; min-height: 430px; background: #171717; color: var(--cream); transform: rotate(-.6deg); }
+.toy-momentum h3, .toy-momentum p { max-width: 46%; }
+.toy-momentum > a { color: var(--black); }
+.momentum-system { position: absolute; top: 62px; right: 4%; width: 48%; height: 320px; }
+.momentum-system::before { position: absolute; inset: 0; opacity: .42; background-image: radial-gradient(var(--cream) 1.5px, transparent 1.5px); background-size: 34px 34px; content: ""; }
+.planet-orbit { position: absolute; top: 50%; left: 50%; z-index: 0; width: 82%; height: 34%; border: 5px solid var(--cream); border-radius: 50%; box-shadow: 8px 8px 0 var(--blue); transform: translate(-50%, -50%) rotate(-14deg); }
+.planet-core { position: absolute; top: 50%; left: 50%; z-index: 1; width: 200px; height: 200px; border: 4px solid var(--cream); border-radius: 50%; background: linear-gradient(155deg, var(--yellow) 0 34%, var(--pink) 34% 65%, var(--blue) 65%); box-shadow: 12px 13px 0 rgb(0 0 0 / 48%); transform: translate(-50%, -50%) rotate(-8deg); }
+.planet-core::before, .planet-core::after { position: absolute; border: 3px solid var(--black); border-radius: 50%; background: rgb(255 249 232 / 46%); content: ""; }
+.planet-core::before { top: 31px; left: 42px; width: 34px; height: 22px; }
+.planet-core::after { right: 33px; bottom: 38px; width: 45px; height: 31px; }
+.planet-moon { position: absolute; top: 40px; right: 8%; z-index: 2; width: 58px; height: 58px; border: 3px solid var(--cream); border-radius: 50%; background: var(--mint); box-shadow: 6px 6px 0 var(--pink); }
+.planet-star { position: absolute; z-index: 3; color: var(--yellow); font: 900 48px/1 "Arial Black", sans-serif; -webkit-text-stroke: 2px var(--cream); }
+.planet-star-a { top: 20px; left: 4%; transform: rotate(12deg); }
+.planet-star-b { right: 2%; bottom: 18px; color: var(--pink); font-size: 34px; transform: rotate(-8deg); }
 .toy-zhiyin { background: var(--yellow); }
 .spark { position: absolute; top: 62px; right: 24px; color: var(--blue); font-size: 148px; line-height: 1; -webkit-text-stroke: 3px var(--black); filter: drop-shadow(6px 7px 0 var(--black)); animation: spin 12s linear infinite; }
 .toy-body { background: var(--blue); color: white; }
@@ -242,6 +258,11 @@ a:focus-visible, button:focus-visible { outline: 4px solid var(--pink); outline-
   .toy-heading h2 { font-size: 17vw; }
   .toy-grid { grid-template-columns: 1fr; padding: 22px 16px 56px; }
   .toy-card { min-height: 380px; }
+  .toy-momentum { grid-column: auto; min-height: 500px; }
+  .toy-momentum h3, .toy-momentum p { max-width: 100%; }
+  .momentum-system { top: 54px; right: 0; width: 100%; height: 280px; }
+  .planet-core { width: 170px; height: 170px; }
+  .planet-moon { top: 30px; right: 10%; width: 50px; height: 50px; }
   .about { grid-template-columns: 1fr; }
   .about > * { min-width: 0; }
   .about-title { padding: 56px 24px; }
