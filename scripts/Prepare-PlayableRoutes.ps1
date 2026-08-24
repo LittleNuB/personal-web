@@ -83,6 +83,15 @@ function Assert-GitSource {
   if ($LASTEXITCODE -ne 0) {
     throw "$Label runtime source files differ from $ExpectedCommit"
   }
+
+  $statusArguments = @("-C", $Root, "status", "--porcelain=v1", "--untracked-files=all", "--") + $RuntimePaths
+  $runtimeStatus = @(& git @statusArguments)
+  if ($LASTEXITCODE -ne 0) {
+    throw "Could not inspect $Label runtime source status"
+  }
+  if ($runtimeStatus.Count -gt 0) {
+    throw "$Label runtime source paths contain modified or untracked files: $($runtimeStatus -join '; ')"
+  }
 }
 
 Assert-SourceFile (Join-Path $zhiyinSource "package.json")
