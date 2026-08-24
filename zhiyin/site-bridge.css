@@ -1,0 +1,67 @@
+.site-return {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  left: max(12px, env(safe-area-inset-left));
+  z-index: 10000;
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid #101010;
+  border-radius: 999px;
+  padding: 0 13px;
+  background: #fff9e8;
+  box-shadow: 4px 4px 0 #ff76b6;
+  color: #101010;
+  font: 900 10px/1 "Arial Black", "Microsoft YaHei UI", sans-serif;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.site-return span {
+  font-size: 20px;
+}
+
+.site-return:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #3157ff;
+}
+
+.site-return:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #101010;
+}
+
+.site-return:focus-visible {
+  outline: 4px solid #f4e32e;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    padding: 56px 14px 8px;
+  }
+
+  .phone-frame {
+    max-height: calc(100vh - 64px);
+  }
+
+  .site-return {
+    top: 7px;
+    right: auto;
+    left: 50%;
+    width: auto;
+    padding: 0 13px;
+    transform: translateX(-50%);
+  }
+
+  .site-return:hover {
+    transform: translateX(-50%) translateY(-2px);
+  }
+
+  .site-return:active {
+    transform: translateX(-50%) translateY(1px);
+  }
+}
