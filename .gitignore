@@ -7,6 +7,8 @@
 *.zip
 node_modules/
 dist/
+/zhiyin/
+/body-inc/
 
 # Secrets and local configuration
 .env

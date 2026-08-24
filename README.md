@@ -4,6 +4,16 @@
 
 ## 一条命令启动
 
+首次准备或源项目更新后，先生成两个可试玩路由：
+
+```powershell
+.\scripts\Prepare-PlayableRoutes.ps1 `
+  -ZhiyinSourceRoot "<知音仓库路径>" `
+  -BodyIncSourceRoot "<Body Inc. 仓库路径>"
+```
+
+运行目录由源项目在本地生成并被 Git 忽略；仓库不跟踪构建产物、依赖或服务端凭证。
+
 ```powershell
 python -m http.server 4173
 ```
