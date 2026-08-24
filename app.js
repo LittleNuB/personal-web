@@ -1,6 +1,8 @@
 const root = document.documentElement;
 const cursor = document.querySelector(".cursor-dot");
 
+root.classList.add("js");
+
 addEventListener("pointermove", (event) => {
   root.style.setProperty("--pointer-x", `${event.clientX}px`);
   root.style.setProperty("--pointer-y", `${event.clientY}px`);

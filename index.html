@@ -8,50 +8,65 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <div class="cursor-dot" aria-hidden="true"></div>
 
     <header class="site-header">
       <a href="#top" class="site-logo" aria-label="LittleNuB 首页">LITTLE<br />NUB!</a>
       <div class="header-marquee" aria-hidden="true">
-        <span>PRODUCTS THAT MOVE PEOPLE • TINY THINGS THAT MAKE ME SMILE • PRODUCTS THAT MOVE PEOPLE • TINY THINGS THAT MAKE ME SMILE •</span>
+        <span>ME + AI = CREATIVITY + MOMENTUM • ME + AI = CREATIVITY + MOMENTUM •</span>
       </div>
       <nav aria-label="主要导航">
         <a href="#work">WORK</a>
         <a href="#toys">TOYS</a>
         <a href="#about">ME</a>
+        <a href="./assets/cao-honglin-resume.pdf" download="曹弘霖-AI产品经理-简历.pdf">CV ↓</a>
         <a href="https://github.com/LittleNuB" target="_blank" rel="noreferrer">GIT ↗</a>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero" id="top">
         <div class="hero-copy">
           <span class="round-sticker hello-sticker">HELLO<br />THERE!</span>
-          <p class="hero-kicker">AI PRODUCT MAKER · VIBE CODER · CURIOUS HUMAN</p>
-          <h1>I TURN<br /><i>“WHAT IF?”</i><br />INTO “TRY IT.”</h1>
-          <p class="hero-cn">一个做产品、写原型、也总在做各种小玩具的人。<br />认真解决问题，顺便让过程更有意思。</p>
-          <a class="chunky-button" href="#work">SEE WHAT I MADE <b>↓</b></a>
+          <p class="hero-kicker">曹弘霖 / LITTLENUB · AI 产品经理</p>
+          <h1><small>ME + AI =</small><span>CREATIVITY</span><i>+ MOMENTUM</i></h1>
+          <p class="hero-cn">把想法尽快做成能点、能试、能判断的东西。</p>
+          <div class="hero-actions" aria-label="快速入口">
+            <a class="hero-action hero-action-primary" href="#toys">PLAY TOYS <b>↓</b></a>
+            <a class="hero-action hero-action-work" href="#work">SERIOUS WORK</a>
+            <a class="hero-action" href="https://github.com/LittleNuB" target="_blank" rel="noreferrer">GITHUB ↗</a>
+            <a class="hero-action" href="./assets/cao-honglin-resume.pdf" download="曹弘霖-AI产品经理-简历.pdf">RÉSUMÉ ↓</a>
+          </div>
         </div>
 
-        <div class="hero-desktop" aria-label="项目窗口拼贴">
-          <article class="os-window blue-window tilt-window">
-            <header><i></i><i></i><i></i><span>project_01.fun</span></header>
-            <div class="blue-window-body"><b>BILI<br />BILL</b><small>YOUR WATCHING,<br />YOUR STORY.</small></div>
+        <div class="hero-workbench" aria-label="曹弘霖的 AI 创作工作台">
+          <article class="os-window profile-window tilt-window">
+            <header><i></i><i></i><i></i><span>maker_profile.png</span></header>
+            <div class="profile-window-body">
+              <img src="./assets/profile-chibi-lightblue-v5.png" alt="曹弘霖的 Q 版头像" />
+              <div><small>CAO HONGLIN / LITTLENUB</small><b>AI PRODUCT<br />MANAGER</b></div>
+            </div>
           </article>
 
-          <article class="os-window pink-window tilt-window">
-            <header><i></i><i></i><i></i><span>coach.cat</span></header>
-            <div class="face"><i></i><i></i><b>⌣</b></div>
-            <strong>LET'S<br />MOVE!</strong>
+          <article class="os-window process-window tilt-window">
+            <header><i></i><i></i><i></i><span>co_making.loop</span></header>
+            <ol>
+              <li><span>01</span><b>IDEA</b></li>
+              <li><span>02</span><b>PROMPT</b></li>
+              <li><span>03</span><b>PROTOTYPE</b></li>
+              <li><span>04</span><b>PLAY</b></li>
+            </ol>
           </article>
 
-          <article class="os-window note-window tilt-window">
-            <header><i></i><i></i><i></i><span>notes.txt</span></header>
-            <p>MAKE IT<br />USEFUL<br /><mark>THEN</mark><br />MAKE IT<br />DELIGHTFUL.</p>
+          <article class="os-window making-window tilt-window">
+            <header><i></i><i></i><i></i><span>current_mode.txt</span></header>
+            <p>ROUGH<br /><mark>FIRST.</mark><br />REAL<br />NEXT.</p>
+            <span>ASK · BUILD · CHECK</span>
           </article>
 
-          <span class="round-sticker wow-sticker">WOW<br />OK!</span>
-          <span class="fake-cursor">↖<small>you</small></span>
+          <span class="round-sticker wow-sticker">HUMAN<br />+ AI</span>
+          <span class="fake-cursor">↖<small>making</small></span>
         </div>
       </section>
 
