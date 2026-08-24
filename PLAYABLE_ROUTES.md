@@ -3,7 +3,7 @@
 ## Zhiyin
 
 - Source: `LittleNuB/Douyin-SubfuncDesign-Zhiyin`
-- Source commit: `7fe1091`
+- Source commit: `7fe1091b75eaea714fe053dc18a2e81bddef192b`
 - Runtime route: `/zhiyin/`
 - Build command: `npm run build -- --base=/zhiyin/`
 - Integration changes: scope media URLs to `/zhiyin/assets/` and add the personal-site return control.
@@ -14,7 +14,7 @@ The personal-site route is generated locally and ignored by Git. It keeps only a
 ## Body Inc.
 
 - Source: `LittleNuB/body-inc-next-set-reconsidered`
-- Source commit: `4cae0da`
+- Source commit: `4cae0dac9c2b4a9f470f95a3285d3be9451b723b`
 - Runtime route: `/body-inc/`
 - Runtime source: the shared deterministic mobile slice plus its validated Pixi office renderer.
 - Integration changes: use route-relative runtime paths, add the personal-site return control, and let unavailable AI requests fall back to local copy.

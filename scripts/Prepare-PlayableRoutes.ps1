@@ -14,6 +14,8 @@ $zhiyinSource = (Resolve-Path -LiteralPath $ZhiyinSourceRoot).Path
 $bodySource = (Resolve-Path -LiteralPath $BodyIncSourceRoot).Path
 $zhiyinOutput = Join-Path $repoRoot "zhiyin"
 $bodyOutput = Join-Path $repoRoot "body-inc"
+$expectedZhiyinCommit = "7fe1091b75eaea714fe053dc18a2e81bddef192b"
+$expectedBodyCommit = "4cae0dac9c2b4a9f470f95a3285d3be9451b723b"
 
 function Assert-SourceFile {
   param([string]$Path)
@@ -63,6 +65,26 @@ function Write-Utf8NoBom {
   [System.IO.File]::WriteAllText($Path, $Content, [System.Text.UTF8Encoding]::new($false))
 }
 
+function Assert-GitSource {
+  param(
+    [string]$Root,
+    [string]$ExpectedCommit,
+    [string[]]$RuntimePaths,
+    [string]$Label
+  )
+
+  $head = (& git -C $Root rev-parse HEAD).Trim()
+  if ($LASTEXITCODE -ne 0 -or $head -ne $ExpectedCommit) {
+    throw "$Label source HEAD must be $ExpectedCommit, found $head"
+  }
+
+  $diffArguments = @("-C", $Root, "diff", "--quiet", "HEAD", "--") + $RuntimePaths
+  & git @diffArguments
+  if ($LASTEXITCODE -ne 0) {
+    throw "$Label runtime source files differ from $ExpectedCommit"
+  }
+}
+
 Assert-SourceFile (Join-Path $zhiyinSource "package.json")
 Assert-SourceFile (Join-Path $zhiyinSource "src\App.tsx")
 Assert-SourceFile (Join-Path $bodySource "prototype-mobile-slice\app.js")
@@ -70,6 +92,26 @@ Assert-SourceFile (Join-Path $bodySource "prototype-pixi-slice\pixi-room.js")
 Assert-SourceFile (Join-Path $templateRoot "zhiyin-site-bridge.css")
 Assert-SourceFile (Join-Path $templateRoot "body-index.html")
 Assert-SourceFile (Join-Path $templateRoot "body-site-bridge.css")
+
+Assert-GitSource -Root $zhiyinSource -ExpectedCommit $expectedZhiyinCommit -Label "Zhiyin" -RuntimePaths @(
+  "package.json",
+  "package-lock.json",
+  "vite.config.ts",
+  "tsconfig.json",
+  "tsconfig.node.json",
+  "index.html",
+  "src",
+  "public"
+)
+Assert-GitSource -Root $bodySource -ExpectedCommit $expectedBodyCommit -Label "Body Inc." -RuntimePaths @(
+  "prototype-mobile-slice/app.js",
+  "prototype-mobile-slice/styles.css",
+  "prototype-mobile-slice/ai-copy-policy.js",
+  "prototype-pixi-slice/bootstrap.js",
+  "prototype-pixi-slice/pixi-room.js",
+  "prototype-pixi-slice/assets",
+  "prototype-pixi-slice/vendor"
+)
 
 Push-Location $zhiyinSource
 try {
