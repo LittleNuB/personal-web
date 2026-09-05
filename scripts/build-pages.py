@@ -16,7 +16,7 @@ def build(archive, output, base):
     if output.exists():
         raise ValueError('Output directory must be new; use a new build directory')
     output.mkdir(parents=True)
-    for name in ('index.html', 'styles.css', 'app.js', 'assets/profile-chibi-lightblue-v5.png', 'assets/cao-honglin-resume.pdf'):
+    for name in ('index.html', 'styles.css', 'app.js', 'assets/profile-chibi-lightblue-v5.png', 'assets/cao-honglin-resume.pdf', 'assets/trainpal-gentle-idle.webp', 'assets/bili-bill-dashboard.png', 'assets/zhiyin-card.png'):
         target = output / name
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / name, target)

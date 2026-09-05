@@ -78,7 +78,7 @@
         <div class="section-intro reveal">
           <span>01 / SELECTED WORK</span>
           <h2>Serious work.<br /><i>Still alive.</i></h2>
-          <p>这些项目用来解决具体问题，点开可以看源码。</p>
+          <p>这些项目用来解决具体问题，点开看看具体做了什么。</p>
         </div>
 
         <div class="work-directory reveal">
@@ -195,6 +195,23 @@
       <div><span>MADE WITH TOO MANY TABS OPEN</span><b>© LITTLE NUB · 2026</b></div>
     </footer>
 
+    <dialog class="project-dialog" aria-labelledby="project-title" aria-describedby="project-summary">
+      <div class="project-dialog-bar"><span>project_info.exe</span><button type="button" class="project-close" aria-label="关闭项目介绍" autofocus>×</button></div>
+      <div class="project-dialog-grid">
+        <figure class="project-preview"><div class="project-preview-content"></div><figcaption></figcaption></figure>
+        <div class="project-details">
+          <p class="project-status"></p>
+          <h2 id="project-title"></h2>
+          <p id="project-summary"></p>
+          <ul class="project-highlights"></ul>
+          <p class="project-boundary"></p>
+          <div class="project-destinations">
+            <a class="project-demo" hidden>直接体验 ↗</a>
+            <a class="project-github" target="_blank" rel="noreferrer" hidden>查看 GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </dialog>
     <script src="./app.js"></script>
   </body>
 </html>
