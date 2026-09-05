@@ -4,9 +4,29 @@
 
 首页使用原生 HTML、CSS 和 JavaScript，保留 Internet Playground 的配色与窗口设计。
 
+## 线上地址与发布
+
+作品集地址为 https://littlenub.github.io/personal-web/ 。GitHub Pages 自动提供 HTTPS。
+
+推送 `master` 后，GitHub Actions 会发布首页和试玩页。部署只包含网页、选定头像、公开简历和两个试玩包，不会发布整个仓库目录。
+
+两个试玩页使用 Release `playables-v1` 中的固定静态包，SHA-256 记录在 `scripts/playables-release.json`。构建会校验文件并适配 `/personal-web/` 子路径。试玩包没有 AI 服务端和密钥，知音使用模拟数据，Body Inc. 使用本地预案。
+
+另一台机器可以下载同一份包构建完整预览，无需获取原项目源码：
+
+```powershell
+gh release download playables-v1 --repo LittleNuB/personal-web --pattern playables-v1.zip --dir artifacts/pages-input
+python scripts/build-pages.py --archive artifacts/pages-input/playables-v1.zip --output artifacts/pages-preview/personal-web
+python -m http.server 4173 --bind 127.0.0.1 --directory artifacts/pages-preview
+```
+
+访问 `http://127.0.0.1:4173/personal-web/`。构建输出须使用新目录，以免覆盖已有文件。
+
+更新试玩核心交互时，再按下方说明准备源码并制作新版本 Release 包；不要覆盖旧包。发布有误时可恢复上一个通过验收的提交，再推送触发发布。
+
 ## 在另一台机器上打开
 
-仓库为 `LittleNuB/personal-web`，默认分支沿用 `master`。私有仓库需要先用有访问权限的 GitHub 账号登录。
+仓库为公开的 `LittleNuB/personal-web`，默认分支沿用 `master`。
 
 ```powershell
 gh repo clone LittleNuB/personal-web
@@ -40,7 +60,7 @@ Momentum Planet 目前链接外部试玩地址，没有迁入本站。
 
 主要文件是 `index.html`、`styles.css` 和 `app.js`。中文保持短句、口语化，不增加没有事实依据的功能或成绩。可见改动至少检查桌面和手机布局，提交时只暂存本轮相关文件。
 
-GitHub 同步不等于发布网站。ECS 上传、Nginx、DNS、HTTPS、备案和安全组仍须逐项获得用户确认。不要从旧机器复制凭证、私钥或浏览器登录状态。
+推送 `master` 会自动更新 GitHub Pages。ECS 上传、Nginx、DNS、备案和安全组仍须逐项获得用户确认。不要从旧机器复制凭证、私钥或浏览器登录状态。
 
 ## 当前页面结构
 
