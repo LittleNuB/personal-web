@@ -1,116 +1,47 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="曹弘霖的个人网站。这里有我做的 AI 产品和小玩具，欢迎来逛逛。" />
-    <title>LittleNuB — Products, prototypes & playful things</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">跳到主要内容</a>
-    <div class="cursor-dot" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <a href="#top" class="site-logo" aria-label="LittleNuB 首页">LITTLE<br />NUB!</a>
-      <div class="header-marquee" aria-hidden="true">
-        <span>ME + AI = CREATIVITY + MOMENTUM • ME + AI = CREATIVITY + MOMENTUM •</span>
-      </div>
-      <nav aria-label="主要导航">
-        <a href="#work">WORK</a>
-        <a href="#toys">TOYS</a>
-        <a href="#about">ME</a>
-        
-        <a href="https://github.com/LittleNuB" target="_blank" rel="noreferrer">GIT ↗</a>
-      </nav>
-    </header>
-
-    <main id="main-content">
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <span class="round-sticker hello-sticker">HELLO<br />THERE!</span>
-          <p class="hero-kicker">曹弘霖 / LITTLENUB · AI 产品经理</p>
-          <h1><small>ME + AI =</small><span>CREATIVITY</span><i>+ MOMENTUM</i></h1>
-          <p class="hero-cn">和 AI 一起做产品，也做点好玩的小东西。</p>
-          <div class="hero-actions" aria-label="快速入口">
-            <a class="hero-action hero-action-primary" href="#toys">PLAY TOYS <b>↓</b></a>
-            <a class="hero-action hero-action-work" href="#work">SERIOUS WORK</a>
-            <a class="hero-action" href="https://github.com/LittleNuB" target="_blank" rel="noreferrer">GITHUB ↗</a>
-            
-          </div>
-        </div>
-
-        <div class="hero-workbench" aria-label="曹弘霖的 AI 创作工作台">
-          <article class="os-window profile-window tilt-window">
-            <header><i></i><i></i><i></i><span>maker_profile.png</span></header>
-            <div class="profile-window-body">
-              <img src="./assets/profile-chibi-lightblue-v5.png" alt="曹弘霖的 Q 版头像" />
-              <div><small>CAO HONGLIN / LITTLENUB</small><b>AI PRODUCT<br />MANAGER</b></div>
-            </div>
-          </article>
-
-          <article class="os-window process-window tilt-window">
-            <header><i></i><i></i><i></i><span>co_making.loop</span></header>
-            <ol>
-              <li><span>01</span><b>IDEA</b></li>
-              <li><span>02</span><b>PROMPT</b></li>
-              <li><span>03</span><b>PROTOTYPE</b></li>
-              <li><span>04</span><b>PLAY</b></li>
-            </ol>
-          </article>
-
-          <article class="os-window making-window tilt-window">
-            <header><i></i><i></i><i></i><span>current_mode.txt</span></header>
-            <p>ROUGH<br /><mark>FIRST.</mark><br />REAL<br />NEXT.</p>
-            <span>ASK · BUILD · CHECK</span>
-          </article>
-
-          <span class="round-sticker wow-sticker">HUMAN<br />+ AI</span>
-          <span class="fake-cursor">↖<small>making</small></span>
-        </div>
-      </section>
-
-      <div class="mode-bridge" aria-hidden="true">
-        <span>SERIOUS DOESN'T HAVE TO LOOK BORING • SERIOUS DOESN'T HAVE TO LOOK BORING • SERIOUS DOESN'T HAVE TO LOOK BORING •</span>
-      </div>
-
-      <section class="serious-work" id="work">
-        <div class="section-intro reveal">
-          <span>01 / SELECTED WORK</span>
-          <h2>Serious work.<br /><i>Still alive.</i></h2>
-          <p>这些项目用来解决具体问题，点开看看具体做了什么。</p>
-        </div>
-
-        <div class="work-directory reveal">
-          <div class="directory-window-bar"><i></i><i></i><i></i><b>serious_work.exe</b><span>— □ ×</span></div>
-          <div class="directory-title"><span>PROJECT DIRECTORY</span><span>STATUS / SCOPE / YEAR</span></div>
-
-          <a class="work-row" href="https://github.com/LittleNuB/TrainPal" target="_blank" rel="noreferrer">
-            <b>01</b>
-            <div><strong>TrainPal</strong><small>把健身视频整理成训练计划，确认后就能跟着练。</small></div>
-            <span>PUBLIC MVP</span><i>HUMAN-IN-LOOP</i><em>2026 ↗</em>
-          </a>
-
-          <a class="work-row" href="https://github.com/LittleNuB/AI-Job-Copilot" target="_blank" rel="noreferrer">
-            <b>02</b>
-            <div><strong>AI Job Copilot</strong><small>看懂岗位要求，对照简历准备投递，还能回看分析记录。</small></div>
-            <span>PUBLIC PROJECT</span><i>EVIDENCE-LED</i><em>2026 ↗</em>
-          </a>
-
-          <a class="work-row" href="https://github.com/LittleNuB/BiliBili-DataViz-Plugin" target="_blank" rel="noreferrer">
-            <b>03</b>
-            <div><strong>Bili-Bill</strong><small>整理 B 站观看记录和收藏，数据留在自己的电脑里。</small></div>
-            <span>PUBLIC ALPHA</span><i>LOCAL-FIRST</i><em>2026 ↗</em>
-          </a>
-
-          <a class="work-row" href="https://github.com/LittleNuB/LY-LLM-wiki" target="_blank" rel="noreferrer">
-            <b>04</b>
-            <div><strong>LY-LLM Wiki</strong><small>整理冰雪跑道抗滑研究文献，查资料时能找到原文依据。</small></div>
-            <span>PUBLIC RESEARCH</span><i>EVIDENCE</i><em>2026 ↗</em>
-          </a>
-        </div>
-      </section>
-
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="曹弘霖的个人网站：AI PM + AI Builder。项目、实验和一些小玩具。">
+<title>曹弘霖 — AI PM + AI Builder</title>
+<link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./preview.css">
+</head>
+<body class="quiet-preview">
+<a class="skip-link" href="#main-content">跳到主要内容</a>
+<header class="quiet-header">
+<a class="quiet-logo" href="#top">LittleNuB<span aria-hidden="true">.</span></a>
+<nav aria-label="主要导航"><a href="#work">作品</a><a href="#more">更多 / 玩具</a><a href="https://github.com/LittleNuB" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+</header>
+<main id="main-content">
+<section class="quiet-hero" id="top">
+<div class="quiet-intro">
+<p class="hello-label">HI, I'M <span>LittleNuB</span></p>
+<h1>曹弘霖<span class="name-dot">.</span></h1>
+<p class="personal-role">喜欢健身的灵魂歌手</p>
+<p class="career-path" aria-label="同济土木，到同济交通，到 PM，到 AI PM 加 AI Builder"><span>同济土木</span><i aria-hidden="true">→</i><span>同济交通</span><i aria-hidden="true">→</i><span>PM</span><i aria-hidden="true">→</i><strong>AI PM + AI Builder</strong></p>
+<div class="quiet-actions"><a class="action-main" href="#work">看作品 <span aria-hidden="true">↓</span></a></div>
+<p class="signature">ME + AI = CREATIVITY + MOMENTUM</p>
+</div>
+<figure class="personal-portrait"><img src="./assets/profile-chibi-lightblue-v5.png" alt="曹弘霖的淡蓝色上衣 Q 版头像" width="480" height="480" fetchpriority="high"><figcaption>ME + AI <span aria-hidden="true">✦</span></figcaption></figure>
+</section>
+<section class="selected-section" id="work" aria-labelledby="selected-title">
+<header class="selected-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="selected-title">A few things I made<span>.</span></h2></div><p>从生活里的小事开始。</p></header>
+<div class="selected-grid">
+<a class="selected-card project-entry" href="https://caohonglin.fun/homymate/" data-project="HomyMate" data-status="在线产品">
+<div class="selected-image"><img src="./assets/homymate-home-preview.png" alt="HomyMate 微缩小家界面，合成数据" width="1440" height="1080" loading="lazy"></div>
+<div class="card-meta"><span>01 / AI × 共同生活</span><span>在线产品</span></div><h3>HomyMate <span aria-hidden="true">↗</span></h3><p>和室友一起记账、分家务，照顾小家。</p></a>
+<a class="selected-card project-entry" href="https://github.com/LittleNuB/BILI-BILL" data-project="Bili-Bill" data-status="浏览器扩展 · Alpha">
+<div class="selected-image"><img src="./assets/bili-bill-dashboard.png" alt="Bili-Bill 内容账单界面，演示数据" loading="lazy"></div>
+<div class="card-meta"><span>02 / AI × 个人内容</span><span>浏览器扩展</span></div><h3>Bili-Bill <span aria-hidden="true">↗</span></h3><p>找回看过的内容，带着出处继续追问。</p></a>
+<a class="selected-card project-entry" href="https://github.com/LittleNuB/TrainPal" data-project="TrainPal" data-status="本地项目 · 新版开发中">
+<div class="selected-image"><img src="./assets/trainpal-home-preview.png" alt="TrainPal 9 月 18 日本地开发版界面，非公开上线版本" width="1280" height="720" loading="lazy"></div>
+<div class="card-meta"><span>03 / AI × 运动</span><span>本地开发中</span></div><h3>TrainPal <span aria-hidden="true">↗</span></h3><p>把想练的视频，整理成能跟着练的方案。</p></a>
+</div>
+<p class="preview-note">界面图片使用示例数据；TrainPal 图片为本地开发版。点击查看项目说明与可用入口。</p>
+</section>
+<section class="more-section" id="more">
+<details><summary><span>More projects & little toys</span><span class="details-hint">展开更多作品 ＋</span></summary>
+<div class="more-links"><a class="project-entry" href="https://github.com/LittleNuB/AI-Job-Copilot" data-project="AI Job Copilot">AI Job Copilot ↗</a><a class="project-entry" href="https://github.com/LittleNuB/LY-LLM-wiki" data-project="LY-LLM Wiki">LY-LLM Wiki ↗</a></div>
       <section class="toy-shelf" id="toys">
         <div class="toy-heading reveal">
           <span>02 / THE TOY SHELF</span>
@@ -188,13 +119,11 @@
           <span class="round-sticker why-sticker">WHY<br />NOT?</span>
         </div>
       </section>
-    </main>
 
-    <footer class="site-footer">
-      <div class="footer-marquee" aria-hidden="true"><span>LET'S MAKE SOMETHING WORTH CLICKING • LET'S MAKE SOMETHING WORTH CLICKING •</span></div>
-      <div><span>MADE WITH TOO MANY TABS OPEN</span><b>© LITTLE NUB · 2026</b></div>
-    </footer>
-
+</details>
+</section>
+</main>
+<footer class="quiet-footer"><span>© 2026 曹弘霖 / LittleNuB</span><a href="https://github.com/LittleNuB" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">沪ICP备2026045451号-1</a></footer>
     <dialog class="project-dialog" aria-labelledby="project-title" aria-describedby="project-summary">
       <div class="project-dialog-bar"><span>project_info.exe</span><button type="button" class="project-close" aria-label="关闭项目介绍" autofocus>×</button></div>
       <div class="project-dialog-grid">
@@ -212,6 +141,16 @@
         </div>
       </div>
     </dialog>
-    <script src="./app.js"></script>
-  </body>
-</html>
+
+<script src="./app.js"></script>
+<script>
+// Development screenshots are explicitly distinguished from public releases.
+projectIntroductions.TrainPal.image = "./assets/trainpal-home-preview.png";
+projectIntroductions.TrainPal.visual = "screenshot";
+projectIntroductions.TrainPal.caption = "TrainPal · 2026-09-18 本地开发版，非公开上线版本";
+projectIntroductions.TrainPal.boundary = "截图为本地开发版，与公开仓库版本可能不同。目前不提供公开在线体验。";
+projectIntroductions["Bili-Bill"].summary = "把 B 站观看记录和收藏留在本地，找回内容，也能对当前视频继续追问。";
+projectIntroductions["Bili-Bill"].highlights = ["查看内容账单，用自然语言找收藏", "摘要与问答附带可核对的来源；AI 需自行配置"];
+</script>
+</body></html>
+

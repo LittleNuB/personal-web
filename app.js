@@ -41,6 +41,13 @@ document.querySelectorAll(".reveal").forEach((element) => observer.observe(eleme
 
 // Project details are local. Opening an introduction never contacts another site.
 const projectIntroductions = {
+  "HomyMate": {
+    image: "./assets/homymate-home-preview.png", caption: "HomyMate 实际界面 · 合成示例数据", visual: "screenshot",
+    summary: "和室友一起记账、分家务，也一起照顾一个小家。",
+    highlights: ["共同账本、家务与物品，放在同一个小家里", "告诉 Mate 想做什么，核对操作卡片后再确认"],
+    boundary: "已有在线版本。截图使用合成数据；照片生成的空间需要核对，不用于精确测量。源码暂不公开。",
+    demo: "https://caohonglin.fun/homymate/",
+  },
   "TrainPal": {
     image: "./assets/trainpal-gentle-idle.webp", caption: "TrainPal 角色形象", visual: "character",
     summary: "把健身视频里的动作整理成训练计划，确认后就能跟着练。",
@@ -95,11 +102,11 @@ function openProjectIntroduction(name, opener) {
   const project = projectIntroductions[name];
   if (!project || !projectDialog || projectDialog.open) return;
   projectOpener = opener;
-  const card = opener.closest(".work-row, .toy-card");
+  const card = opener.closest(".work-row, .toy-card, .project-entry");
   const github = project.github || (opener.hostname === "github.com" ? opener.href : null);
   projectDialog.querySelector("#project-title").textContent = name;
   projectDialog.querySelector("#project-summary").textContent = project.summary;
-  projectDialog.querySelector(".project-status").textContent = card.querySelector("header span, :scope > span")?.textContent || "PROJECT";
+  projectDialog.querySelector(".project-status").textContent = opener.dataset.status || card?.querySelector("header span, :scope > span")?.textContent || "PROJECT";
   projectDialog.querySelector(".project-boundary").textContent = project.boundary;
   const highlights = projectDialog.querySelector(".project-highlights");
   highlights.replaceChildren(...project.highlights.map(text => {
@@ -144,8 +151,8 @@ function openProjectIntroduction(name, opener) {
 }
 
 if (projectDialog && typeof projectDialog.showModal === "function") {
-  document.querySelectorAll(".work-row, .toy-card > a").forEach(opener => {
-    const name = opener.closest(".toy-card")?.querySelector("h3").textContent || opener.querySelector("strong")?.textContent;
+  document.querySelectorAll(".work-row, .toy-card > a, [data-project]").forEach(opener => {
+    const name = opener.dataset.project || opener.closest(".toy-card")?.querySelector("h3").textContent || opener.querySelector("strong")?.textContent;
     if (!projectIntroductions[name]) return;
     opener.setAttribute("aria-haspopup", "dialog");
     opener.setAttribute("aria-label", `查看 ${name} 项目介绍`);
@@ -185,3 +192,4 @@ if (projectDialog && typeof projectDialog.showModal === "function") {
     projectOpener?.focus({ preventScroll: true });
   });
 }
+
