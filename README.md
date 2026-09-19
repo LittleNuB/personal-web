@@ -8,7 +8,7 @@
 
 作品集地址为 https://littlenub.github.io/personal-web/ 。GitHub Pages 自动提供 HTTPS。
 
-推送 `master` 后，GitHub Actions 会发布首页和试玩页。部署只包含网页、选定头像、公开简历和两个试玩包，不会发布整个仓库目录。
+推送 `master` 后，GitHub Actions 会发布首页和试玩页。部署只包含网页、选定头像和两个试玩包，不会发布整个仓库目录。
 
 两个试玩页使用 Release `playables-v1` 中的固定静态包，SHA-256 记录在 `scripts/playables-release.json`。构建会校验文件并适配 `/personal-web/` 子路径。试玩包没有 AI 服务端和密钥，知音使用模拟数据，Body Inc. 使用本地预案。
 
@@ -34,7 +34,7 @@ cd personal-web
 python -m http.server 4173 --bind 127.0.0.1
 ```
 
-然后打开 `http://127.0.0.1:4173/`。预览和修改首页只需要 Python，无需安装前端依赖。简历下载文件和选定头像都在仓库中。
+然后打开 `http://127.0.0.1:4173/`。预览和修改首页只需要 Python，无需安装前端依赖。选定头像在仓库中；简历不再公开下载，也不包含在部署包中。
 
 ## 准备站内试玩页
 

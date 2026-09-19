@@ -21,3 +21,5 @@ dist/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+/assets/cao-honglin-resume.pdf
